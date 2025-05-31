@@ -24,4 +24,9 @@ public class DashboardPageAction {
         wait.until(ExpectedConditions.elementToBeClickable(dashboardPageLocator.logoutButton));
         dashboardPageLocator.logoutButton.click();
     }
+
+    public void clickLogoutConfirmationButton(){
+        wait.until(ExpectedConditions.elementToBeClickable(dashboardPageLocator.logoutConfirmationButton));
+        dashboardPageLocator.logoutConfirmationButton.click();
+    }
 }
