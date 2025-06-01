@@ -20,6 +20,7 @@ public class Driver {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--guest");
         driver = new ChromeDriver(options);
 
         // Remove navigator.webdriver via JS

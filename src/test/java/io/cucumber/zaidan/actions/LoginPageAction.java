@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import org.openqa.selenium.TimeoutException;
 
 import io.cucumber.zaidan.locators.LoginPageLocator;
 import io.cucumber.zaidan.utils.Driver;
@@ -42,5 +43,13 @@ public class LoginPageAction {
     public String getErrorMessage() {
         wait.until(ExpectedConditions.visibilityOf(loginPageLocator.errorMessage));
         return loginPageLocator.errorMessage.getText();
+    }
+
+    public boolean isLoginPageDisplayed() {
+        try {
+            return wait.until(ExpectedConditions.urlToBe("http://ptbsp.ddns.net:6882/login"));
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 }
