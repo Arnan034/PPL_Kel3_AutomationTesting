@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: io.cucumber.zaidan.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 67.45 s <<< FAILURE! -- in io.cucumber.zaidan.RunCucumberTest
+Examples.Example #1.1 -- Time elapsed: 27.48 s <<< FAILURE!
+java.lang.AssertionError: 
+Menu navigasi tidak sesuai expected:<[Dasbor, Tagihan Siswa, Transaksi Penerimaan Dana, Pengaturan Notifikasi, Status Pembayaran, Rekapitulasi, Progres Transaksi Penerimaan Dana]> but was:<[Dasbor
+Tagihan Siswa
+Transaksi Penerimaan Dana
+Pengaturan Notifikasi
+Status Pembayaran
+Rekapitulasi
+Progres Transaksi Penerima Dana]>
+	at io.cucumber.zaidan.stepDefinition.LoginDefinition.menuNavigasiSampingMenampilkanDaftarBerikut(LoginDefinition.java:60)
+	at ✽.Menu navigasi samping menampilkan daftar berikut:(classpath:io/cucumber/zaidan/login.feature:13)
+
+Examples.Example #1.1 -- Time elapsed: 9.461 s <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Username atau password salah]> but was:<[Incorrect username or password, please try again!]>
+	at io.cucumber.zaidan.stepDefinition.LoginDefinition.userHarusDapatMelihatPesanPemberitahuan(LoginDefinition.java:67)
+	at ✽.User harus dapat melihat pesan pemberitahuan "Username atau password salah"(classpath:io/cucumber/zaidan/login.feature:30)
+
+Examples.Example #1.2 -- Time elapsed: 9.381 s <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Username atau password salah]> but was:<[Incorrect username or password, please try again!]>
+	at io.cucumber.zaidan.stepDefinition.LoginDefinition.userHarusDapatMelihatPesanPemberitahuan(LoginDefinition.java:67)
+	at ✽.User harus dapat melihat pesan pemberitahuan "Username atau password salah"(classpath:io/cucumber/zaidan/login.feature:30)
+
